@@ -4,8 +4,10 @@ import AutoImport from 'unplugin-auto-import/rspack';
 import Components from 'unplugin-vue-components/rspack';
 import { VantResolver } from '@vant/auto-import-resolver';
 
+import { pluginLess } from '@rsbuild/plugin-less';
+
 export default defineConfig({
-  plugins: [pluginVue()],
+  plugins: [pluginVue(), pluginLess()],
   tools: {
     rspack: {
       plugins: [
